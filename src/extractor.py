@@ -1,6 +1,6 @@
 # Extração de textos de arquivos em PDF. 
 # Usando PyMuPDF.
-import fitz
+import pymupdf
 import os
 import re
 
@@ -20,7 +20,7 @@ def list_docs(path):
 # Função que extrai todo texto de um arquivo.
 def extract_text(path):
     try:
-        doc = fitz.open(path)
+        doc = pymupdf.open(path)
         full_text = ""
         
         for page_number in range(len(doc)):
