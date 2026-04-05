@@ -156,17 +156,43 @@ import fitz
 
 **Ignorar** - não afeta o funcionamento do PyMuPDF no notebook.
 
-## 📁 Estrutura do projeto
+## 📂 Estrutura e organização do projeto
 ```bash
 stil2021-corpus-processing/
+├── data/
+│   ├── raw/           # Coloque os artigos em PDFs aqui
+│   ├── processed/     # Arquivos gerados no template JSON para cada artigo
+│   └── output/        # dataset final, unico e completo do processamento
 ├── notebooks/
-│   └── *.ipynb
+│   └── processamento.ipynb
 ├── src/
-│   ├── extractor.py
-│   └── processor.py
-├── venv/          # Ambiente virtual
+│   ├── extractor.py   # Extração de textos dos PDFs
+│   └── processor.py   # Processamento NLP com Stanza
 └── README.md
 ```
+
+### Como organizar seus arquivos
+
+#### 1. Adicionar documentos para processamento
+
+Coloque todos os seus arquivos PDF (ou outros formatos suportados) na pasta data/raw/:
+
+```bash
+# Exemplo de estrutura
+data/
+└── raw/
+    ├── artigo_1.pdf
+    ├── artigo_2.pdf
+    ├── artigo_3.pdf
+    └── ...
+```
+
+#### 2. Arquivos processados
+
+- **data/processed/** - Armazena arquivos no template JSON gerados durante o processamento (ex: textos extraídos, dados serializados)
+- **data/output/** - Contém os resultados finais (ex: JSON com lemas, POS tags, análises estatísticas)
+
+> 💡 Dica: As pastas processed/ e output/ podem ser recriadas automaticamente pelo código se não existirem.
 
 ## 📦 Dependências principais
 |Biblioteca |	Versão | Uso |
