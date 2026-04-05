@@ -43,4 +43,10 @@ def clean_text(text):
 
     return text
 
+def build_doc_url(filename):
+   # Extrai id do nome do arquivo
+   doc_id = filename.split('-')[0]
+   
+   # Cria URL
+   return f"https://sol.sbc.org.br/index.php/stil/article/view/{doc_id}"
 
