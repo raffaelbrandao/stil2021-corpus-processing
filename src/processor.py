@@ -3,7 +3,7 @@ import stanza
 from collections import Counter
 
 # Classe para processamento de texto
-class NLPProcessor:
+class NPLProcessor:
     def __init__(self):
         print("Carregando o modelo do Stanza para português...")
         self.nlp = stanza.Pipeline('pt', processors='tokenize,mwt,pos,lemma', verbose=False)
