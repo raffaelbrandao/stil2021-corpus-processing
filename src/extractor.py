@@ -17,7 +17,7 @@ def list_docs(path):
 
     return sorted(docs)
 
-# Função que extrai todo texto de um arquivo
+# Extrai todo texto de um arquivo
 def extract_text(path):
     try:
         doc = pymupdf.open(path)
@@ -43,10 +43,9 @@ def clean_text(text):
 
     return text
 
+# Monta o URL
 def build_doc_url(filename):
-   # Extrai id do nome do arquivo
    doc_id = filename.split('-')[0]
    
-   # Cria URL
    return f"https://sol.sbc.org.br/index.php/stil/article/view/{doc_id}"
 
