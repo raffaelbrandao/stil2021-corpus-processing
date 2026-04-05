@@ -1,10 +1,10 @@
-# Extração de textos de arquivos em PDF. 
-# Usando PyMuPDF.
+# Extração de textos de arquivos em PDF
+# Usando PyMuPDF
 import pymupdf
 import os
 import re
 
-# Lista os arquivos em um diretório.
+# Lista os arquivos em um diretório
 def list_docs(path):
     docs = []
 
@@ -17,7 +17,7 @@ def list_docs(path):
 
     return sorted(docs)
 
-# Função que extrai todo texto de um arquivo.
+# Função que extrai todo texto de um arquivo
 def extract_text(path):
     try:
         doc = pymupdf.open(path)
@@ -33,9 +33,9 @@ def extract_text(path):
         print(f"Erro ao ler o caminho do arquivo {path}: {e}")
         return ""
 
-# Limpa o texto removendo espaços e as quebras de linhas.
+# Limpa o texto removendo espaços e as quebras de linhas
 def clean_text(text):
-    # Remove múltiplos espaços e as quebras de linhas.
+    # Remove múltiplos espaços e as quebras de linhas
     text = re.sub(r'\s+', ' ', text)
 
     # Remove espaços no início e fim
