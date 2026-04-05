@@ -21,13 +21,12 @@ def list_docs(path):
 def extract_text(path):
     try:
         doc = pymupdf.open(path)
-        full_text = ""
-        
-        for page_number in range(len(doc)):
-            page = doc[page_number]
-            full_text += page.get_text()
-        
+
+        for page in doc:
+            full_text = page.get_text()
+
         doc.close()
+
         return full_text
     
     except Exception as e:
