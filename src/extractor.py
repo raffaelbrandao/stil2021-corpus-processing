@@ -233,8 +233,13 @@ def extract_title_by_font_size(doc):
        return ""
 
 # Extrai autores
-def extract_authors_and_affiliations(texto_inicio):
-    """Extrai autores e afiliações do artigo"""
+def extract_authors_and_affiliations(path):
+    doc = pymupdf.open(path)
+    pagina = doc[0]
+    texto_inicio = pagina.get_text()
+    texto_inicio = clean_text(texto_inicio)
+    doc.close()
+
     linhas = texto_inicio.split('\n')
     
     # Encontra a linha com autores
@@ -370,11 +375,8 @@ def extract_keywords(path):
         
         doc.close()
         
-        if keywords:
-            if isinstance(keywords, list):
-                keywords = ' '.join(keywords)
-
-            keywords = clean_text(keywords).strip()
+        if keywords and isinstance(keywords, list):
+            keywords = [clean_text(kw).strip() for kw in keywords if clean_text(kw).strip()]
         
         return keywords
     
@@ -412,13 +414,13 @@ def extract_keywords_by_format(doc):
                         found_keywords = True
 
                         for phrase in ["palavras chaves"]:
-                            line_text = line_text.replace(phrase, "")
+                          line_text = re.sub(re.escape(phrase), "", line_text, flags=re.IGNORECASE)
 
                         line_text = line_text.strip(".:; ")
 
                         if line_text:
-                            keywords_parts.append(line_text)
-
+                            keywords_list = split_keywords(line_text)
+                            keywords_parts.extend(keywords_list)
                     continue
                 
                 if found_keywords:
@@ -426,13 +428,29 @@ def extract_keywords_by_format(doc):
                         any(phrase in line_lower for phrase in ["introdução", "Introdu"])):
                         return keywords_parts
                     
-                    keywords_parts.append(line_text)
+                    keywords_list = split_keywords(line_text)
+                    keywords_parts.extend(keywords_list)
         
         return keywords_parts
     
     except Exception as e:
         print(f"Erro ao extrair palavras-chave: {e}")
         return []
+
+def split_keywords(text):
+    if not text:
+        return []
+    
+    # Remove ponto final no final se existir
+    text = text.rstrip('.')
+    
+    # Divide por vírgula
+    keywords = [kw.strip() for kw in text.split(',')]
+    
+    # Remove qualquer keyword vazia
+    keywords = [kw for kw in keywords if kw]
+    
+    return keywords
 
 # Extrai referências
 def extract_references(path):
