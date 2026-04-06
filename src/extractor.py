@@ -193,3 +193,90 @@ def clean_abstract(abstract):
             return abstract
 
     return ""
+
+# Extrai palavras-chave / keywords
+def extract_keywords(path):
+    try:
+        doc = pymupdf.open(path)
+        
+        keywords = extract_keywords_by_format(doc)
+        
+        doc.close()
+        
+        if keywords:
+            keywords = clean_keywords(keywords)
+        
+        return keywords
+    
+    except Exception as e:
+        print(f"Erro ao extrair palavras-chave: {e}")
+        return ""
+
+# Extrai palavras-chave baseado no nome da seção.
+def extract_keywords_by_format(doc):
+    try:
+        keywords_parts = []
+        found_keywords = False
+
+        page = doc[0]
+        blocks = page.get_text("dict")
+
+        for block in blocks.get("blocks", []):
+            for line in block.get("lines", []):
+                line_text = ""
+
+                for span in line.get("spans", []):
+                    text = span.get("text", "").strip()
+                    if text:
+                        line_text += text + " "
+
+                line_text = line_text.strip()
+
+                if not line_text:
+                    continue
+
+                line_lower = line_text.lower()
+
+                if not found_keywords:
+                    if any(phrase in line_lower for phrase in ["palavras chaves"]):
+                        found_keywords = True
+
+                        for phrase in ["palavras chaves"]:
+                            line_text = line_text.replace(phrase, "")
+
+                        line_text = line_text.strip(".:; ")
+
+                        if line_text:
+                            keywords_parts.append(line_text)
+
+                    continue
+                
+                if found_keywords:
+                    if (line_lower.startswith(("1.introdu", "1. introdu", "I.introdu", "I. introdu")) or
+                        any(phrase in line_lower for phrase in ["introdução", "Introdu"])):
+                        return keywords_parts
+                    
+                    keywords_parts.append(line_text)
+        
+        return keywords_parts
+    
+    except Exception as e:
+        print(f"Erro ao extrair palavras-chave: {e}")
+        return []
+
+def clean_keywords(keywords_parts):
+    if not keywords_parts:
+        return ""
+    
+    if isinstance(keywords_parts, list):
+        keywords = ' '.join(keywords_parts)
+    else:
+        keywords = keywords_parts
+    
+    # Remove múltiplos espaços
+    keywords = re.sub(r'\s+', ' ', keywords)
+    
+    # Remove espaços no início e fim
+    keywords = keywords.strip()
+    
+    return keywords
