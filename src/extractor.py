@@ -4,6 +4,8 @@ import pymupdf
 import os
 import re
 from pathlib import Path
+import unicodedata
+from collections import Counter
 
 # Lista os arquivos em um diretório
 def list_docs(path):
@@ -19,7 +21,7 @@ def list_docs(path):
     return sorted(docs)
 
 # Extrai todo texto de um arquivo
-def extract_text(path):
+def extract_text_simple(path):
     try:
         doc = pymupdf.open(path)
         full_text = ""
@@ -36,12 +38,144 @@ def extract_text(path):
         return ""
 
 # Limpa o texto removendo espaços e as quebras de linhas
-def clean_text(text):
+def clean_text_simple(text):
     # Remove múltiplos espaços e as quebras de linhas
     text = re.sub(r'\s+', ' ', text)
 
     # Remove espaços no início e fim
     text = text.strip()
+
+    return text
+
+def fix_hyphenation(text):
+    text = re.sub(r'(\w+)-\s*\n\s*(\w+)', r'\1\2', text)
+    return text
+
+def fix_combining_accents(text):
+
+    accent_map = {
+        "´": {"a":"á","e":"é","i":"í","o":"ó","u":"ú",
+              "A":"Á","E":"É","I":"Í","O":"Ó","U":"Ú"},
+        "ˆ": {"a":"â","e":"ê","i":"î","o":"ô","u":"û",
+              "A":"Â","E":"Ê","I":"Î","O":"Ô","U":"Û"},
+        "˜": {"a":"ã","o":"õ","A":"Ã","O":"Õ"},
+        "`": {"a":"à","A":"À"},
+        "¸": {"c":"ç","C":"Ç"},
+        "¨": {"u":"ü","U":"Ü"},
+    }
+
+    for accent, letters in accent_map.items():
+        for letter, replacement in letters.items():
+            text = re.sub(rf"{accent}\s*{letter}", replacement, text)
+
+    return text
+
+def normalize_unicode(text):
+    text = unicodedata.normalize("NFC", text)
+    return text
+
+def remove_repeated_lines(text, min_repetition=3):
+
+    lines = text.split("\n")
+    line_counts = Counter(lines)
+
+    cleaned_lines = [
+        line for line in lines
+        if line_counts[line] < min_repetition or len(line.strip()) < 5
+    ]
+
+    return "\n".join(cleaned_lines)
+
+def clean_structure(text):
+    # Remove múltiplas quebras de linha
+    text = re.sub(r'\n{3,}', '\n\n', text)
+
+    # Remove múltiplos espaços
+    text = re.sub(r'[ \t]+', ' ', text)
+
+    # Remove espaço antes de pontuação
+    text = re.sub(r'\s+([.,;:])', r'\1', text)
+
+    return text.strip()
+
+def fix_broken_paragraphs(text):
+    # Junta linhas que não terminam com pontuação forte
+    text = re.sub(r'(?<![.!?])\n(?!\n)', ' ', text)
+    return text
+
+def fix_ligatures(text):
+    ligatures = {
+        "ﬁ": "fi",
+        "ﬂ": "fl",
+        "ﬀ": "ff",
+        "ﬃ": "ffi",
+        "ﬄ": "ffl",
+        "ﬅ": "ft",
+        "œ": "oe",
+        "æ": "ae",
+    }
+
+    for wrong, correct in ligatures.items():
+        text = text.replace(wrong, correct)
+
+    return text
+
+def fix_remaining_artifacts(text):
+    text = re.sub(r'[cC]¸\s*˜\s*a\s*o', 'ção', text)
+    text = re.sub(r'[cC]¸\s*˜\s*o\s*e\s*s?', 'ções', text)
+
+    text = text.replace("c¸", "ç")
+    text = text.replace("C¸", "Ç")
+
+    text = text.replace("´ı", "í")
+    text = text.replace("`ı", "ì")
+
+    text = re.sub(r'([a-zA-Z])https?://', r'\1 https://', text)
+
+    return text
+
+def fix_backtick_artifacts(text):
+    text = text.replace("ç`", "ç")
+    text = text.replace("a`", "à")
+    text = text.replace("e`", "è")
+    text = text.replace("i`", "ì")
+    text = text.replace("o`", "ò")
+    text = text.replace("u`", "ù")
+    text = text.replace("ç`oes", "ções")
+
+    return text
+
+def isolate_references(text):
+    text = re.sub(r'\s+(Referências)', r'\n\n\1', text)
+    return text
+
+def extract_text(path):
+    try:
+        doc = pymupdf.open(path)
+        full_text = ""
+
+        for page in doc:
+            full_text += page.get_text()
+
+        doc.close()
+
+        return full_text
+
+    except Exception as e:
+        print(f"Erro ao ler o caminho do arquivo {path}: {e}")
+        return ""
+
+def clean_text(text):
+    text = fix_hyphenation(text)
+    text = fix_ligatures(text)
+    text = fix_combining_accents(text)
+    text = fix_backtick_artifacts(text)
+    text = fix_remaining_artifacts(text)
+    text = normalize_unicode(text)
+    text = isolate_references(text)
+    text = remove_repeated_lines(text)
+    text = fix_broken_paragraphs(text)
+    text = clean_structure(text)
 
     return text
 
@@ -61,7 +195,7 @@ def extract_title(path):
         doc.close()
         
         if title:
-            title = clean_title(title)
+            title = clean_text(title)
         
         return title
     
@@ -92,32 +226,11 @@ def extract_title_by_font_size(doc):
         
         title = ' '.join(font_map[max_font])
         
-        title = clean_title(title)
-        
         return title
     
     except Exception as e:
        print(f"Erro ao extrair título pelo tamanho da fonte: {e}")
        return ""
-
-# Limpa o título
-def clean_title(title):
-    if not title:
-        return ""
-
-    # Remove números de página
-    title = re.sub(r'\b\d+\s*$', '', title)
-
-    # Remove múltiplos espaços
-    title = re.sub(r'\s+', ' ', title)
-
-    # Remove quebras de linha
-    title = title.replace('\n', ' ').replace('\r', ' ')
-
-    # Remove espaços no início e fim
-    title = title.strip()
-
-    return title
 
 # Extrai autores
 def extract_authors_and_affiliations(texto_inicio):
@@ -185,21 +298,25 @@ def extract_abstract(path):
     try:
         doc = pymupdf.open(path)
 
-        abstract = extract_title_by_italic_format(doc)
+        abstract = extract_abstract_by_format(doc)
 
         doc.close()
 
         if abstract:
-            abstract = clean_abstract(abstract)
+            if isinstance(abstract, list):
+                abstract = " ".join(abstract)
 
-        return abstract
-    
+            abstract = clean_text(abstract).strip()
+            return abstract
+        else:
+            return ""
+
     except Exception as e:
         print(f"Erro ao extrair resumo: {e}")
         return ""
 
 # Extrai resumo baseado no nome da seção
-def extract_title_by_italic_format(doc):
+def extract_abstract_by_format(doc):
     try:
         first_page = doc[0]
         blocks = first_page.get_text("dict")
@@ -243,18 +360,6 @@ def extract_title_by_italic_format(doc):
     except Exception as e:
         print(f"Erro ao extrair resumo: {e}")
         return ""
-    
-# Limpa o resumo
-def clean_abstract(abstract):
-    if not abstract:
-        return ""
-
-    if abstract:
-            abstract = ' '.join(abstract)
-            abstract = ' '.join(abstract.split())
-            return abstract
-
-    return ""
 
 # Extrai palavras-chave / keywords
 def extract_keywords(path):
@@ -266,7 +371,10 @@ def extract_keywords(path):
         doc.close()
         
         if keywords:
-            keywords = clean_keywords(keywords)
+            if isinstance(keywords, list):
+                keywords = ' '.join(keywords)
+
+            keywords = clean_text(keywords).strip()
         
         return keywords
     
@@ -326,23 +434,6 @@ def extract_keywords_by_format(doc):
         print(f"Erro ao extrair palavras-chave: {e}")
         return []
 
-def clean_keywords(keywords_parts):
-    if not keywords_parts:
-        return ""
-    
-    if isinstance(keywords_parts, list):
-        keywords = ' '.join(keywords_parts)
-    else:
-        keywords = keywords_parts
-    
-    # Remove múltiplos espaços
-    keywords = re.sub(r'\s+', ' ', keywords)
-    
-    # Remove espaços no início e fim
-    keywords = keywords.strip()
-    
-    return keywords
-
 # Extrai referências
 def extract_references(path):
     try:
@@ -354,6 +445,7 @@ def extract_references(path):
         for page_num in range(len(doc)):
             page = doc[page_num]
             text = page.get_text()
+            text = clean_text(text)
 
             if not found_references:
                 ref_match = search_references_section(text)
