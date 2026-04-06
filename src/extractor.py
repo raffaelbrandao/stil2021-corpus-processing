@@ -97,8 +97,6 @@ def extrair_dados_estatisticos(caminho_pdf, processador):
     texto_completo = extract_text(caminho_pdf)
     titulo = extract_title(caminho_pdf)
 
-    # --- LÓGICA DE AUTORES CORRIGIDA ---
-# Função: Extrai autores e afiliações
 def extract_authors_and_affiliations(texto_inicio):
     """Extrai autores e afiliações do artigo"""
     linhas = texto_inicio.split('\n')
@@ -158,8 +156,6 @@ def extract_authors_and_affiliations(texto_inicio):
         })
     
     return autores if autores else [{"nome": "Revisar no PDF", "afiliacao": "Instituição não identificada", "orcid": "N/A"}]
-
-    # --- FIM DA LÓGICA DE AUTORES ---refactor: lista authors and relantionship
 
     resumo = extract_abstract(texto_inicio)
     keywords = extract_keywords(texto_inicio)
