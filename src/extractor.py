@@ -233,13 +233,8 @@ def extract_title_by_font_size(doc):
        return ""
 
 # Extrai autores
-def extract_authors_and_affiliations(path):
-    doc = pymupdf.open(path)
-    pagina = doc[0]
-    texto_inicio = pagina.get_text()
-    texto_inicio = clean_text(texto_inicio)
-    doc.close()
-
+def extract_authors_and_affiliations(texto_inicio):
+    """Extrai autores e afiliações do artigo"""
     linhas = texto_inicio.split('\n')
     
     # Encontra a linha com autores
