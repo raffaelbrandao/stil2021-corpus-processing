@@ -342,3 +342,112 @@ def clean_keywords(keywords_parts):
     keywords = keywords.strip()
     
     return keywords
+
+# Extrai referências
+def extract_references(path):
+    try:
+        doc = pymupdf.open(path)
+
+        references_parts = []
+        found_references = False
+
+        for page_num in range(len(doc)):
+            page = doc[page_num]
+            text = page.get_text()
+
+            if not found_references:
+                ref_match = search_references_section(text)
+
+                if ref_match is not None:
+                    found_references = True
+                    remaining_text = text[ref_match:]
+                    references_parts.append(remaining_text)
+            else:
+                if is_next_section(text):
+                    break
+                references_parts.append(text)
+
+        doc.close()
+
+        if references_parts:
+            full_references = '\n'.join(references_parts)
+            return references_to_list(full_references)
+
+        return []
+
+    except Exception as e:
+        print(f"Erro ao extrair referências: {e}")
+        return []
+
+def search_references_section(text):
+    patterns = [
+        r'Referências',
+        r'Referencias',
+        r'REFERÊNCIAS',
+        r'REFERENCIAS',
+        r'Referˆencias',
+        r'References',
+        r'REFERENCES',
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+
+        if match:
+            return match.start()
+
+    return None
+
+def is_next_section(text):
+    next_section_patterns = [
+        r'^\s*(?:Apêndice|Appendix|Anexo|ANNEX|Glossário|Glossary)',
+        r'^\s*\d+\.\s*(?:Apêndice|Appendix|Anexo)',
+        r'^\s*[IVXLCDM]+\.\s*(?:Apêndice|Appendix)',
+    ]
+
+    text_start = text[:500]
+
+    for pattern in next_section_patterns:
+        if re.search(pattern, text_start, re.IGNORECASE | re.MULTILINE):
+            return True
+
+    return False
+
+def references_to_list(references_text):
+    if not references_text:
+        return []
+
+    references_text = re.sub(r'^Refer[\w]+\s*\n?', '', references_text, flags=re.IGNORECASE)
+    references_text = re.sub(r'^Referˆencias\s*\n?', '', references_text, flags=re.IGNORECASE)
+    references_text = re.sub(r'^References\s*\n?', '', references_text, flags=re.IGNORECASE)
+    references_text = re.sub(r'-\n\s*', '', references_text, flags=re.IGNORECASE)
+
+    lines = references_text.split('\n')
+
+    ref_list = []
+    current_ref = ""
+
+    for line in lines:
+        line = line.strip()
+
+        if not line:
+            continue
+        
+        is_new_ref = re.match(r'^[A-ZÀ-ÖØ-Ý][^()]*?\(\d{4}\)\.', line, re.IGNORECASE)
+
+        if is_new_ref:
+            if current_ref:
+                current_ref = re.sub(r'\s+', ' ', current_ref)
+                ref_list.append(current_ref)
+            current_ref = line
+        else:
+            if current_ref:
+                current_ref += " " + line
+            else:
+                current_ref = line
+
+    if current_ref:
+        current_ref = re.sub(r'\s+', ' ', current_ref)
+        ref_list.append(current_ref)
+
+    return ref_list
