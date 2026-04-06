@@ -3,6 +3,7 @@
 import pymupdf
 import os
 import re
+from pathlib import Path
 
 # Lista os arquivos em um diretório
 def list_docs(path):
@@ -117,7 +118,68 @@ def clean_title(title):
     title = title.strip()
 
     return title
+
+# Extrai autores
+def extract_authors_and_affiliations(texto_inicio):
+    """Extrai autores e afiliações do artigo"""
+    linhas = texto_inicio.split('\n')
     
+    # Encontra a linha com autores
+    linha_autores = None
+    for linha in linhas:
+        if re.search(r'[A-Z][a-z]+\s+[A-Z][a-z]+.*\d+', linha):
+            linha_autores = linha
+            break
+    
+    if not linha_autores:
+        return [{"nome": "Revisar no PDF", "afiliacao": "Instituição não identificada", "orcid": "N/A"}]
+    
+    # Extrai autores da linha
+    autores_temp = []
+    partes = linha_autores.split(',')
+    
+    for parte in partes:
+        parte = parte.strip()
+        match = re.search(r'^(.+?)(\d+(?:,\d+)*)$', parte)
+        if match:
+            nome = match.group(1).strip()
+            numeros = match.group(2).strip()
+            autores_temp.append((nome, numeros))
+    
+    # Extrai instituições
+    instituicoes = {}
+    for linha in linhas:
+        linha = linha.strip()
+        if re.match(r'^\d+', linha) and ',' in linha and len(linha) < 200:
+            if not re.match(r'^\d+\.', linha):
+                match = re.match(r'^(\d+)([^,]+),\s*(.+)$', linha)
+                if match:
+                    num = match.group(1)
+                    instituicao = match.group(2).strip()
+                    pais = match.group(3).strip()
+                    instituicoes[num] = f"{instituicao}, {pais}"
+    
+    # Associa autores às instituições
+    autores = []
+    for nome, numeros in autores_temp:
+        lista_nums = numeros.split(',')
+        afiliacoes = []
+        for num in lista_nums:
+            num = num.strip()
+            if num in instituicoes:
+                afiliacoes.append(instituicoes[num])
+        
+        if not afiliacoes:
+            afiliacoes = ["Instituição não identificada"]
+        
+        autores.append({
+            "nome": nome,
+            "afiliacao": " / ".join(afiliacoes),
+            "orcid": "N/A"
+        })
+    
+    return autores if autores else [{"nome": "Revisar no PDF", "afiliacao": "Instituição não identificada", "orcid": "N/A"}]
+
 # Extrai resumo
 def extract_abstract(path):
     try:
