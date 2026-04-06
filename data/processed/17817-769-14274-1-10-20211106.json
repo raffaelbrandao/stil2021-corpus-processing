@@ -3,7 +3,28 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17817",
   "idioma": "Português",
   "storage_key": "files/17817-769-14274-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Márcia Cançado",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Luana Amaral",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Letícia Meirelles",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Thaís Bechir",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Neste artigo apresentamos a proposta de descrição e análise de dados verbais do português brasileiro presente no banco de dados VerboWeb. Os verbos foram agrupados e classificados de acordo com o arcabouço teórico-metodológico da Semântica Lexical, que assume que certas propriedades semânticas dos verbos determinam seu comportamento sintático. Mostramos como o banco de dados é estruturado e as generalizações que podemos fazer sobre o léxico verbal de nossa língua.",
   "keywords": [],

@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17800",
   "idioma": "Português",
   "storage_key": "files/17800-769-14257-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Vera Framework",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Um Framwork",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "A verificação manual de fatos tende a ser cara e a escalabilidade desafiadora, incentivando a busca por métodos automáticos. Porém, esses métodos foram criados com arquiteturas monolíticas, não fazendo uso de peças pré-construídas e são mais difíceis de serem compreendidos por terceiros. Este trabalho tem como objetivo propor um framework, onde o desenvolvimento de métodos pode ser feito de forma modular, criando fluxos de trabalho basea- dos em etapas-chave que podem ser interligadas para gerar a classificação de entrada. O framework faz uso de uma ontologia de rastreabilidade proposta para mapear todos os dados gerados durante a execução sob um vocabulário unificado, o que facilita a comunicação entre esses componentes independentes.",
   "keywords": [],

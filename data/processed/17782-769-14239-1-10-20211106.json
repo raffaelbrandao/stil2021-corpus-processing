@@ -3,7 +3,33 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17782",
   "idioma": "Português",
   "storage_key": "files/17782-769-14239-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Padilha de Assis",
+      "afiliacao": "Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas Universidade Federal do ABC (UFABC) - Santo André - SP - Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Camila das Merces Silva",
+      "afiliacao": "Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas Universidade Federal do ABC (UFABC) - Santo André - SP - Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Janaína da Silva Leite",
+      "afiliacao": "Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas Universidade Federal do ABC (UFABC) - Santo André - SP - Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Wellington Araujo Nogueira",
+      "afiliacao": "Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas Universidade Federal do ABC (UFABC) - Santo André - SP - Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Kenji Nose Filho",
+      "afiliacao": "Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas Universidade Federal do ABC (UFABC) - Santo André - SP - Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Analisamos o léxico biomédico de um corpus de textos em língua portuguesa da base Pubmed sobre a Covid-19. A adoção inicial de medidas clássicas de densidade e diversidade lexical não foi capaz de evidenciar a distribuição lexical nos diferentes gêneros e especialidades clínicas de que se compõe o corpus. Com base no conceito de “lexicalidade biomédica”, foi proposto e testado um novo indicador, o Lex-BioMed, com bons resultados.",
   "keywords": [],

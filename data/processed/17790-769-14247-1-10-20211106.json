@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17790",
   "idioma": "Português",
   "storage_key": "files/17790-769-14247-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Alan da Silva Romualdo",
+      "afiliacao": "Universidade Federal de São Carlos (UFSCar) – Departamento de Computação Caixa Postal 676 – 13565-905 – São Carlos – SP – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Livy Real",
+      "afiliacao": "Digital Lab – americanas s.a. São Paulo – SP – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Helena de Medeiros Caseli",
+      "afiliacao": "Universidade Federal de São Carlos (UFSCar) – Departamento de Computação Caixa Postal 676 – 13565-905 – São Carlos – SP – Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "O aprendizado multimodal visa explorar as características das di- versas modalidades (texto, imagem, áudio) para gerar modelos computacio- nais. No comércio eletrônico, devido à grande variedade das características dos produtos e à ausência ou inconsistência de informações, a combinação de informações de modos diferentes vem a ser bastante adequada. Neste trabalho são apresentados alguns experimentos para a classificação multimodal (texto e imagem) de produtos (produtos adultos) que não podem ser vendidos no market- place da empresa parceira. Nesses experimentos, redes neurais foram usadas para treinar classificadores uni e multimodal. O classificador multimodal atin- giu 99% de F 1 contra 98% do modelo textual e 94% do visual.",
   "keywords": [],

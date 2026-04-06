@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17814",
   "idioma": "Português",
   "storage_key": "files/17814-769-14271-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Magali Sanches Duran",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Lucelene Lopes",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Thiago Alexandre Salgueiro Pardo",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Este artigo descreve a instanciação das diretrizes do modelo Universal Dependencies (UD) para a anotação de Numerais em português. Mostramos a importância de conhecer o tópico a ser instanciado no contexto de várias línguas, uma vez que a anotação UD tem por objetivo promover, o máximo possível, o paralelismo entre as línguas. Exploramos então a descrição dos numerais nas gramáticas, buscando subsídios para elaborar instruções para atribuir a etiqueta NUM da UD. Os resultados da combinação das diretrizes da UD com as características dos numerais em português são apresentados em detalhes, com exemplos, juntamente com os argumentos que amparam cada decisão tomada.",
   "keywords": [],

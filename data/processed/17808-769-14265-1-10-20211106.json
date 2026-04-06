@@ -3,7 +3,33 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17808",
   "idioma": "Português",
   "storage_key": "files/17808-769-14265-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Jorão Gomes Jr",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Rômulo Chrispim de Mello",
+      "afiliacao": "Departamento de Ciência da Computação – UFJF",
+      "orcid": ""
+    },
+    {
+      "nome": "Ana Beatriz Kapps dos Reis",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Victor Str",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Jairo Francisco de Souza",
+      "afiliacao": "Laboratório de Aplicações e Inovação em Computação (LApIC) Programa de Pós-Graduação em Ciência da Computação – UFJF e Departamento de Ciência da Computação – UFJF",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "O avanço nos sistemas de Question Answering alcançou resultados importantes e novos problemas relacionados, como Complex Question Answe- ring e Knowledge Base Question Answering, surgiram. No entanto, faltam es- tudos que analisam o problema e abordagens para Complex Knowledge Base Question Answering (C-KBQA). Este trabalho preenche essa lacuna apresen- tando uma visão geral do C-KBQA. Uma coleção de 54 artigos foi selecionada e um mapa dos métodos, abordagens, tendências e lacunas sobre C-KBQA foi realizado. É mostrado que as questões de múltiplos saltos e restritivas são os dois tipos de questões abordadas na literatura. Três etapas foram identificadas para criar um sistema C-KBQA e duas abordagens são geralmente usadas.",
   "keywords": [],

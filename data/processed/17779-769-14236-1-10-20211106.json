@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17779",
   "idioma": "Português",
   "storage_key": "files/17779-769-14236-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Ana Luiza Nunes",
+      "afiliacao": "Escola de Matemática Aplicada da FGV (FGV/EMAp), Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Alexandre Rademaker",
+      "afiliacao": "Escola de Matemática Aplicada da FGV (FGV/EMAp), Brasil e IBM Research, Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Leonel Figueiredo de Alencar",
+      "afiliacao": "Escola de Matemática Aplicada da FGV (FGV/EMAp), Brasil e Universidade Federal do Ceará (UFC), Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Ampla cobertura lexical constitui um dos pré-requisitos para a robus- tez de uma gramática computacional. Propomos uma metodologia para povoar a tabela de formas verbais irregulares da PorGram (gramática do português no formalismo HPSG) utilizando os dados do dicionário MorphoBr. Nós im- plementamos um algoritmo que classifica as formas verbais do MorphoBr em regulares e irregulares, aplicando as regras flexionais da PorGram. Avaliamos o algoritmo com numa amostra de 38 verbos, regulares e irregulares, obtendo os resultados esperados. Uma contribuição adicional foi o melhoramento do MorphoBr, com a eliminação de mais de 270.000 entradas erradas e a inclusão de quase 13.000 entradas faltantes.",
   "keywords": [],

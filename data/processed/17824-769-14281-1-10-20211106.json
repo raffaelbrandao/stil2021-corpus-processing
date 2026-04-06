@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17824",
   "idioma": "Português",
   "storage_key": "files/17824-769-14281-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Lívia Vicente Dutra",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Natália Sathler Sigiliano",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "A pesquisa “Gêneros, tipologias textuais e análise linguística: constituição de recursos didáticos para o trabalho contextualizado dos conhecimentos linguísticos em uma abordagem orientada pelos gêneros textuais” objetiva desenvolver uma ferramenta linguístico-computacional de auxílio ao professor para a abordagem de conteúdos de gramática pautados em gêneros textuais, já que a relação entre gêneros textuais e sua construção linguístico-discursiva ainda se constitui em um desafio para o ensino de língua. Esta ferramenta é construída com base em anotações da FrameNet Brasil. Por meio dela, espera-se tornar possível ao usuário a busca por gêneros textuais mais propícios para o ensino de determinados tópicos gramaticais, tendo em vista sua proeminência nesses gêneros.",
   "keywords": [],

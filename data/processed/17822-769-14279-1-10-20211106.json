@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17822",
   "idioma": "Português",
   "storage_key": "files/17822-769-14279-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Constituintes Frasais",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Função de Sujeito",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Descreve-se a organização sintática de um conjunto de Sentenças dos Juizados Especiais Cíveis, cujos documentos devem ser acessíveis ao cidadão leigo, sem auxílio de um advogado. São destacados os constituintes frasais com função de sujeito em 110 Sentenças à luz dos estudos de Terminologia, da Linguística de Corpus e de pesquisas sobre compreensão leitora. Verificou-se que a maioria desses constituintes assume formas que tendem a demandar maior sobrecarga na leitura e a exibir traços pouco coincidentes com padrões da linguagem cotidiana escrita, o que dificulta sua inteligibilidade para o público leigo. Abstract. This work describes the syntactic organization of a set of Judgments of the Special Civil Courts, whose documents must be accessible to the lay citizen without the assistance of a lawyer. The phrasal constituents with subject function in 110 Judgments are highlighted in the light of Terminology studies, Corpus Linguistics and research on reading comprehension. The study found that most of these constituents assume forms that tend to demand greater burden in reading and to exhibit traits that hardly coincide with patterns of written daily language, which makes their intelligibility difficult for the lay public.",
   "keywords": [],

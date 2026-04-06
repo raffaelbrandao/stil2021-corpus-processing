@@ -3,7 +3,38 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17820",
   "idioma": "Português",
   "storage_key": "files/17820-769-14277-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Raquel Meister Ko",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Julian Tejada",
+      "afiliacao": "Departamento de Psicologia – Universidade Federal de Sergipe",
+      "orcid": ""
+    },
+    {
+      "nome": "René Alain Santana de Almeida",
+      "afiliacao": "Departamento de Letras Vernáculas – Universidade Federal de Sergipe (UFS) Cidade Universitária – 49.100-000 – São Cristóvão – SE – Brazil",
+      "orcid": ""
+    },
+    {
+      "nome": "Paloma Batista Cardoso",
+      "afiliacao": "Programa de Pós-Graduação em Letras – Universidade Federal de Sergipe",
+      "orcid": ""
+    },
+    {
+      "nome": "Victor Renê Andrade Souza",
+      "afiliacao": "Programa de Pós-Graduação em Letras – Universidade Federal de Sergipe",
+      "orcid": ""
+    },
+    {
+      "nome": "Vanesca Carvalho Leal",
+      "afiliacao": "Programa de Pós-Graduação em Letras – Universidade Federal de Sergipe",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Um estudo exploratório de exposição de participantes às variantes de uma variável linguística saliente do ponto de vista social, a palatalização progressiva, foi realizado com o uso de rastreamento ocular, para examinar o processamento da variação linguística. Os resultados mostram que exposição à variante estigmatizada captou a atenção e aumentou a dilatação da pupila dos participantes, o que pode ser interpretado como evidência de uma resposta emocional.",
   "keywords": [],

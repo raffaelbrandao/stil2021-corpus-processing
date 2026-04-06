@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17818",
   "idioma": "Português",
   "storage_key": "files/17818-769-14275-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Elian Conceição Luz",
+      "afiliacao": "FORMAS Research Group, Departamento de Ciência da Computação Instituto de Computação – Universidade Federal da Bahia, 40170-110 – Salvador, BA, Brazil e Instituto de Letras - Universidade Federal da Bahia",
+      "orcid": ""
+    },
+    {
+      "nome": "Camilla Rastely da Silva",
+      "afiliacao": "Instituto de Letras - Universidade Federal da Bahia",
+      "orcid": ""
+    },
+    {
+      "nome": "Daniela Barreiro Claro",
+      "afiliacao": "FORMAS Research Group, Departamento de Ciência da Computação Instituto de Computação – Universidade Federal da Bahia, 40170-110 – Salvador, BA, Brazil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Neste estudo, elencaram-se features morfossintáticas para classificação de triplas, com base em um corpus paralelo em Galego, Português do Brasil e Espanhol Europeu. Nos experimentos, a nível sintático, observou-se desempenho relevante de features que oferecem maior dificuldade para extrair triplas válidas, como as co-relacionadas a objeto/sujeito nulo e a inversão verbo-sujeito, bem como triplas relacionais que formam sub-sentenças agramaticais. A nível morfológico, observou-se que a classe gramatical do vocábulo inicial de cada sub-sentença, sobretudo quando são preposições, foram relevantes para a classificação das triplas.",
   "keywords": [],

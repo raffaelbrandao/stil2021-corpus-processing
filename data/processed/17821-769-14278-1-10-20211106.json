@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17821",
   "idioma": "Português",
   "storage_key": "files/17821-769-14278-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Universidade Federal de São Carlos",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "São Carlos",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Neste artigo é apresentada uma análise da complexidade textual de notícias satíricas e verdadeiras para o português do Brasil. As chamadas Fake News – ou notícias falsas – têm sido um grande problema na atualidade. O conteúdo satírico é um ponto importante na detecção automática de notícias fal- sas, pois seu uso pode causar confusão subjacente na análise. Para realização desta pesquisa, foi aplicada a ferramenta NILC-Metrix e avaliadas 16 medi- das, entre aspectos descritivos, sintáticos e semânticos, notando-se uma maior complexidade para os textos verdadeiros.",
   "keywords": [],

@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17811",
   "idioma": "Português",
   "storage_key": "files/17811-769-14268-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Isaac Souza de Miranda Junior",
+      "afiliacao": "Universidade Federal de São Carlos (UFSCar), São Carlos, Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Marcela Monteiro Lemos Couto",
+      "afiliacao": "Universidade Federal de São Carlos (UFSCar), São Carlos, Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Neste trabalho, investiga-se o comportamento sintático-semântico do verbo “falar” no português brasileiro (PB) em um corpus jornalístico e em três bases de dados verbais do PB (VerbNet.Br, VerboWeb e Verbo-Brasil). Os dados demonstram a polivalência e complexidade de “falar”. Além disso, no que se refere à análise das bases de dados, foi possível constatar a necessidade de revisões manuais, realizadas por linguistas, e/ou ampliações das descrições linguísticas, principalmente ao considerar a relevância de construções com o verbo “falar” para diferentes aplicações na área de Processamento de Língua Natural.",
   "keywords": [],

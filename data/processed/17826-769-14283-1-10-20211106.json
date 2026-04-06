@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17826",
   "idioma": "Português",
   "storage_key": "files/17826-769-14283-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Luana Balador Belisário",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Thiago Alexandre Salgueiro Pardo",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Este artigo descreve o estudo do desempenho de dois parsers conhecidos para o português com base nas diretrizes do modelo internacional “Universal Dependencies”. Visando mapear o estado da arte na área, os parsers foram avaliados com relação à detecção de algumas relações essenciais do modelo que indicam os argumentos principais dos verbos. Mostramos que o parser UDPipe se destaca entre os parsers avaliados, mas que ainda há muito a avançar na área.",
   "keywords": [],

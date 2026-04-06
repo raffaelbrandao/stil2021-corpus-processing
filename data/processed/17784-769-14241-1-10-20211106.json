@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17784",
   "idioma": "Português",
   "storage_key": "files/17784-769-14241-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Luiz Otávio Alves Hammes",
+      "afiliacao": "Centro de Desenvolvimento Tecnológico (CDTec) Universidade Federal de Pelotas (UFPel) – Pelotas, RS – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Larissa Astrogildo de Freitas",
+      "afiliacao": "Centro de Desenvolvimento Tecnológico (CDTec) Universidade Federal de Pelotas (UFPel) – Pelotas, RS – Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Neste trabalho propomos realizar o fine-tuning dos modelos BERTimbau-base e BERTimbau-large na tarefa de Classificação de 27 tipos de emoções em sentenças, baseado no dataset GoEmotions traduzido para a língua portuguesa, por meio de ferramentas de tradução automática. Compa- ramos os resultados de nossos experimentos com os resultados disponibilizados pelos autores do dataset GoEmotions e obtivemos um ganho de desempenho ao qual atribuímos ao algoritmo de balanceamento utilizado.",
   "keywords": [],

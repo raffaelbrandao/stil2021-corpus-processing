@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17809",
   "idioma": "Português",
   "storage_key": "files/17809-769-14266-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Victor Renê Andrade Souza",
+      "afiliacao": "Programa de Pós-Graduação em Letras – Centro de Educação e Ciências Humanas Universidade Federal de Sergipe (UFS) – São Cristóvão – SE – Brazil",
+      "orcid": ""
+    },
+    {
+      "nome": "Raquel Meister Ko",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Este estudo apresenta uma nova versão do teste de decisão lexical de- senvolvido para captar a apreciação social de fenômenos fonológicos variáveis [Freitag e Souza 2019]. Os efeitos de decisão lexical foram testados nas vari- antes padrão e não padrão dos fenômenos de monotongação de ditongo decres- cente e crescente, desnasalização de ditongo nasal átono final e palatalização de oclusivas alveolares, em ambiente progressivo e regressivo, em uma amostra de 25 universitários de Sergipe. Os resultados reforçam o que já foi identifi- cado no estudo anterior: as variantes do tipo estereótipo e marcador são sig- nificativamente associadas à não palavra; enquanto as variantes indicador não apresentam essa relação.",
   "keywords": [],

@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17794",
   "idioma": "Português",
   "storage_key": "files/17794-769-14251-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Vinicius Casani",
+      "afiliacao": "ANYMARKET – Maringá – PR – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Correa Souza",
+      "afiliacao": "Universidade Tecnológica Federal do Paraná – Dois Vizinhos – PR – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Francisco Carlos",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "A depressão é um distúrbio psicológico que afeta milhões de pes- soas no mundo, indiferente à idade, classe social ou nacionalidade. Diferentes técnicas tem sido exploradas para analisar e reconhecer sintomas depressivos na literatura, como técnicas de Processamento de Linguagem Natural e Análise de Sentimentos. Entretanto, para o português brasileiro, poucos estudos tem proposto datasets para a classificação de sintomas da depressão. Neste artigo, propomos uma estratégia chamada DP-Symptom-Identifier para coletar tweets e criar um novo dataset com sentenças que possuem sintomas da depressão. Experimentos iniciais usando diferentes algoritmos obtiveram um alto desem- penho preditivo, o que mostra que as pesquisas nesta área são promissoras.",
   "keywords": [],

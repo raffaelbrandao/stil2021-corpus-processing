@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17796",
   "idioma": "Português",
   "storage_key": "files/17796-769-14253-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Ana Alice Ximenes Mota",
+      "afiliacao": "César Lincoln Cavalcante Mattos1",
+      "orcid": ""
+    },
+    {
+      "nome": "Wellington Franco",
+      "afiliacao": "César Lincoln Cavalcante Mattos1",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Os danos causados por notícias falsas ou enganosas têm se potenci- alizado graças à facilidade com que as informações são disseminadas em redes sociais. Durante a pandemia do Covid-19, iniciada em 2020, tais notícias foram capazes de gerar pânico na população, além de instruir erroneamente as pes- soas sobre a prevenção da doença. O presente trabalho introduz um novo corpus a partir de postagens no Twitter na língua portuguesa com desinformações so- bre a Covid-19 1. Além do novo corpus, o trabalho avalia diferentes abordagens de representações textuais e algoritmos de aprendizagem na tarefa de detecção de mensagens contendo desinformação. O melhor resultado obtido alcançou F1-score de 89% no modelo de classificação SVM com a representação textual TF-IDF.",
   "keywords": [

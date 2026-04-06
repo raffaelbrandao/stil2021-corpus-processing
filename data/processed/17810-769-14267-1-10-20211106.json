@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17810",
   "idioma": "Português",
   "storage_key": "files/17810-769-14267-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Lucas Santos Silva",
+      "afiliacao": "Programa de Pós-Graduação em Letras – Centro de Educação e Ciências Humanas Universidade Federal de Sergipe (UFS) – São Cristóvão – SE – Brazil",
+      "orcid": ""
+    },
+    {
+      "nome": "Raquel Meister Ko",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Apresentamos uma análise comparativa acerca da palatalização de /t/ e /d/ em duas amostras independentes, e com tamanho distinto, compostas por dados de fala (n = 8.850) e de leitura em voz alta (n = 831) de estudantes da Universidade Federal de Sergipe. Controlamos as variáveis sociais desloca- mento e tempo no curso, e as variáveis linguísticas contexto anterior, contexto posterior, tonicidade e sonoridade, com o objetivo de identificar se os efeitos condicionantes da palatalização da fala atuam na leitura em voz alta. Os resul- tados sinalizam que, mesmo em amostras distintas, o comportamento dos fato- res sociais e linguísticos apresentam estabilidade na mudança e propagação da palatalização na comunidade.",
   "keywords": [],

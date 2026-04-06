@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17819",
   "idioma": "Português",
   "storage_key": "files/17819-769-14276-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Rua Marquês de São Vicente",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Rio de Janeiro",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Este artigo tem por objetivo descrever a metodologia desenvolvida para revisar o Emocionário, léxico de palavras de emoção do projeto AC/DC, da Linguateca. Esta primeira parcela da revisão foi realizada em sete dos 24 grupos do Emocionário, sendo eles “Desespero”, “Esperança”, “Humildade”, “Pena”, “Satisfação”, “Saudade” e “Surpresa”. A metodologia é descrita de forma detalhada, fazendo uso de exemplos retirados do próprio corpus para ilustrar cada passo. Ao final, algumas das principais mudanças realizadas são documentadas e discutidas.",
   "keywords": [],

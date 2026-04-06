@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17813",
   "idioma": "Português",
   "storage_key": "files/17813-769-14270-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Ariani Di Felippo",
+      "afiliacao": "Núcleo Interinstitucional de Linguística Computacional (NILC) Departamento de Letras – Universidade Federal de São Carlos (UFSCar) Caixa Postal 676 – 13565-905 – São Carlos – SP – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Caroline Postali",
+      "afiliacao": "Núcleo Interinstitucional de Linguística Computacional (NILC) Departamento de Letras – Universidade Federal de São Carlos (UFSCar) Caixa Postal 676 – 13565-905 – São Carlos – SP – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Gabriel Ceregatto",
+      "afiliacao": "Núcleo Interinstitucional de Linguística Computacional (NILC) Departamento de Letras – Universidade Federal de São Carlos (UFSCar) Caixa Postal 676 – 13565-905 – São Carlos – SP – Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "A anotação de textos informais segundo a Universal Dependencies requer dois processos de segmentação: delimitação da unidade relevante para a análise sintática e identificação das palavras sintáticas. Neste artigo, apresentam-se as idiossincrasias linguísticas do corpus DANTEStocks, composto por tweets do mercado financeiro, escritos em Português, e as estratégias gerais de segmentação automática. Assim, contribui-se para a descrição de aspectos linguísticos dos tweets e para o desenvolvimento de recursos e ferramentas de processamento automático desse subgênero de “user-generated content”.",
   "keywords": [],

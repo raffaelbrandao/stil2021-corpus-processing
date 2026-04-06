@@ -3,7 +3,33 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17781",
   "idioma": "Português",
   "storage_key": "files/17781-769-14238-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Elvis de Souza",
+      "afiliacao": "Departamento de Letras Pontifícia Universidade Católica do Rio de Janeiro",
+      "orcid": ""
+    },
+    {
+      "nome": "Aline Silveira",
+      "afiliacao": "Departamento de Letras Pontifícia Universidade Católica do Rio de Janeiro",
+      "orcid": ""
+    },
+    {
+      "nome": "Tatiana Cavalcanti",
+      "afiliacao": "Departamento de Letras Pontifícia Universidade Católica do Rio de Janeiro",
+      "orcid": ""
+    },
+    {
+      "nome": "Maria Clara Castro",
+      "afiliacao": "Departamento de Letras Pontifícia Universidade Católica do Rio de Janeiro",
+      "orcid": ""
+    },
+    {
+      "nome": "Cláudia Freitas",
+      "afiliacao": "Departamento de Letras Pontifícia Universidade Católica do Rio de Janeiro",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Este trabalho descreve a criação do PetroGold, um treebank padrão ouro para o domínio do óleo & gás. O material é composto por teses, dissertações e monografias, contém 9.127 frases (253.640 tokens) e conta com anotação morfossintática de dependências segundo a abordagem Universal De- pendencies. Detalhamos alguns dos desafios linguísticos do domínio para a anotação sintática e verificamos a qualidade do material produzido por meio de uma avaliação intrínseca: utilizando um modelo criado pela ferramenta UDPipe, o corpus leva a 90,65%, 88,53% e 82,88% de acertos conforme as medidas UAS, LAS e CLAS, respectivamente.",
   "keywords": [],

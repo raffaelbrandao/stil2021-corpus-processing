@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17816",
   "idioma": "Português",
   "storage_key": "files/17816-769-14273-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Constructicon da Frame",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Net Brasil",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Este trabalho objetiva apresentar a descrição e a modelagem linguístico-computacional das construções interrogativas QU- do Português brasileiro no Constructicon da FrameNet Brasil.",
   "keywords": [],

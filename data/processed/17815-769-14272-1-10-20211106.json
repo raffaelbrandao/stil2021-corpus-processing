@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17815",
   "idioma": "Português",
   "storage_key": "files/17815-769-14272-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Vânia Gomes de Almeida",
+      "afiliacao": "Doutoranda em Linguística - Universidade Federal de Juiz de Fora",
+      "orcid": ""
+    },
+    {
+      "nome": "Tiago Timponi Torrent",
+      "afiliacao": "Professor Associado – Universidade Federal de Juiz de Fora – Juiz de Fora, MG - Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Este trabalho apresenta uma proposta para representar computacio- nalmente as construções Transitiva Indireta, Transitiva Oblíqua e Bitransitiva do Português Brasileiro, no âmbito do Constructicon da FrameNet Brasil. Dessa forma, demonstra de que maneira as teorias irmãs da Semântica de Fra- mes e da Gramática das Construções podem contribuir na busca por um modelo de língua que alie forma e sentido em uma única representação. Abstract. This work presents a proposal to computationally represent the Indirect Transitive, Oblique Transitive and Ditransitive constructions of Brazilian Portuguese, in the framework of the Constructicon of FrameNet Brasil. In this way, it demonstrates how the sister theories of Frame Semantics and Construction Grammar can contribute to the quest for a language model bringing together form and meaning in one same representation.",
   "keywords": [],

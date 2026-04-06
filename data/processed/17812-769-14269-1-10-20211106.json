@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17812",
   "idioma": "Português",
   "storage_key": "files/17812-769-14269-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Sónia Reis",
+      "afiliacao": "HLT – Human Language Technologies Lab Lisboa, Portugal",
+      "orcid": ""
+    },
+    {
+      "nome": "Jorge Baptista",
+      "afiliacao": "HLT – Human Language Technologies Lab Lisboa, Portugal e Universidade do Algarve, Faculdade de Ciências Humanas e Sociais Faro, Portugal",
+      "orcid": ""
+    },
+    {
+      "nome": "Nuno Mamede",
+      "afiliacao": "HLT – Human Language Technologies Lab Lisboa, Portugal e INESC ID Lisboa Lisboa, Portugal",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Os provérbios são um tipo especial de unidades linguísticas que tem sido amplamente ignorado pela comunidade de Processamento de Linguagem Natural (PLN), apesar de levantarem desafios interessantes para o processa- mento. Este artigo apresenta o procedimento de integração do Mínimo Pare- miológico do Português no sistema STRING e a distribuição desses provérbios mais usuais em três corpora distintos do português (europeu). 1. Processamento de provérbios em textos Tanto quanto sabemos, os provérbios estão praticamente ausentes dos recursos linguísticos de muitos sistemas de Processamento de Linguagem Natural (PNL) desen- volvidos para o português. Tal resulta, provavelmente, do seu estatuto linguístico pouco consensual, algures entre o léxico e a cultura, que está certamente na origem da sua ausência dos dicionários de língua, encontrando-se antes recenseados em coletâneas de provérbios, onde convivem com outras expressões (locuções) de natureza muito variada, frequentemente idiomáticas (i.e. semanticamente não composicionais). Outro aspeto é o seu extenso número e a sua variação formal, lexical e sintática, que dificultam o reconhe- cimento destas expressões em textos [Rassi et al. 2014a, Rassi et al. 2014b]. Finalmente, o seu estatuto de citação, nem sempre formalmente assinalado (aspas/discurso relatado), confere-lhe uma certa autonomia relativamente o texto em que se insere, permitindo que sejam violados mecanismos de coesão discursiva (processos anafóricos, concordância verbal na subordinação), ainda que os seus elementos se prestem a ser retomados nou- tros locais do discurso, dando origem a criativos jogos de palavras. São, pois, complexos os desafios que os provérbios levantam ao seu processamento automático em textos. O estudo dos provérbios no quadro do PLN pode dar origem a aplicações soci- etalmente relevantes. [Reis and Baptista 2016b] desenvolveram dois conjuntos de jogos",
   "keywords": [],

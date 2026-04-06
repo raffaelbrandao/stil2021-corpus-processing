@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17783",
   "idioma": "Português",
   "storage_key": "files/17783-769-14240-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Leonardo Capellaro",
+      "afiliacao": "Universidade Federal de São Carlos (UFSCar) Departamento de Computação – LALIC Caixa Postal 676 – 13565-905 – São Carlos – SP – Brasil",
+      "orcid": ""
+    },
+    {
+      "nome": "Helena de Medeiros Caseli",
+      "afiliacao": "Universidade Federal de São Carlos (UFSCar) Departamento de Computação – LALIC Caixa Postal 676 – 13565-905 – São Carlos – SP – Brasil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "O campo da política no Brasil é um dos mais movimentados e mais polêmicos da última década. Com o advento das redes sociais, um novo ca- nal de comunicação entre os eleitores e os políticos foi criado, com os usuários tendo um espaço para publicar suas opiniões e crenças. Neste contexto, este tra- balho mostra como modelos BERT se saem na análise de polaridade (positiva, negativa ou neutra) e de tópicos de grandes quantidades de tweets relaciona- dos à política do Brasil. Experimentos foram realizados com tweets relacio- nados às eleições de 2018, e melhores resultados ( F 1 = 96% ) foram obtidos para a classificação de polaridade em comparação com trabalhos anteriores. A avaliação qualitativa dos tópicos também mostrou resultados promissores.",
   "keywords": [],

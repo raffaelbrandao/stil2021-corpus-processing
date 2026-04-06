@@ -3,7 +3,23 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17780",
   "idioma": "Português",
   "storage_key": "files/17780-769-14237-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Wellington José Leite da Silva",
+      "afiliacao": "Escola de Matemática Aplicada da FGV (EMAP), Brazil",
+      "orcid": ""
+    },
+    {
+      "nome": "Alexandre Rademaker",
+      "afiliacao": "Escola de Matemática Aplicada da FGV (EMAP), Brazil e IBM Research, Brazil",
+      "orcid": ""
+    },
+    {
+      "nome": "Leonel Figueiredo de Alencar",
+      "afiliacao": "Escola de Matemática Aplicada da FGV (EMAP), Brazil e Universidade Federal do Ceará (UFC), Brazil",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Recursos linguísticos, como corpora, são fundamentais para o desen- volvimento de ferramentas para processamento de textos. No processamento de textos em português, um recurso atualmente considerado fundamental é o corpus UD Bosque, parte da coleção de corpora no projeto ‘Universal Depen- dencies’ (UD). A despeito do corpus UD Bosque ter sido convertido para as anotações de UD de um corpus originalmente revisado, ainda são vários os pro- blemas de consistência das anotações encontrados na atual versão do corpus. Neste trabalho, apresentamos a metodologia usada para corrigir os problemas de anotações morfológicas nos corpus UD Bosque, em particular, identificamos erros nas anotações morfológicas de determinantes e adjetivos que deveriam concordar com os substantivos que modificam. Discutimos como os erros fo- ram identificados, as exceções ou casos não triviais, as correções realizadas e o impacto das mudanças no corpus no treinamento de analisadores sintáticos estatísticos.",
   "keywords": [],

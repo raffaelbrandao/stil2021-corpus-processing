@@ -3,7 +3,18 @@
   "informacoes_url": "https://sol.sbc.org.br/index.php/stil/article/view/17825",
   "idioma": "Português",
   "storage_key": "files/17825-769-14282-1-10-20211106.pdf",
-  "autores": [],
+  "autores": [
+    {
+      "nome": "Sabrina de Fátima Barbosa Taniwaki",
+      "afiliacao": "",
+      "orcid": ""
+    },
+    {
+      "nome": "Jackson Wilke da Cruz Souza",
+      "afiliacao": "",
+      "orcid": ""
+    }
+  ],
   "data_publicacao": "",
   "resumo": "Criação e Anotação do corpus de s científicos de Ciências Sociais Aplicadas Sabrina de Fátima Barbosa Taniwaki, Jackson Wilke da Cruz Souza Instituto de Ciências Sociais Aplicadas – Universidade Federal de Alfenas (UNIFAL-MG) Varginha-MG – Brasil {sabrina.tanikaki, jackson.souza}@unifal-mg.edu.br Abstract. With the growing interest and need in the creation of (semi)automatic tools that help the literacy process in academic textual genres, we present in this work the corpus of scientific abstracts in applied social sciences. Our objective was to study, at the sentential level, the rhetorical structure of the abstracts in the areas of Public Administration, Accounting and Economics, based on the typology proposed in the literature, using the WebAnno corpus annotation tool. As a result, (i) the organization of a set of 200 texts, (ii) the preliminary study of the rhetorical structure of those areas and (iii) the production of an annotation manual with specific guidelines on the identification of the rhetorical structure of the abstracts scientific. Com o crescente interesse e necessidade na criação de ferramentas (semi)automáticas que auxiliem o processo de letramento em gêneros textuais acadêmicos, apresentamos neste trabalho o corpus de s científicos em ciências sociais aplicadas. Nosso objetivo foi estudar, a nível sentencial, a estrutura retórica dos s das áreas de Administração Pública, Contabilidade e Economia, com base na tipologia proposta na literatura, por meio da ferramenta de anotação de corpus WebAnno. Tivemos como resultado, (i) a organização de um conjunto de 200 textos, (ii) o estudo preliminar da estrutura retórica das referidas áreas e (iii) a produção de um manual de anotação com diretrizes específicas sobre a identificação da estrutura retórica dos s científicos",
   "keywords": [],
