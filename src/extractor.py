@@ -179,6 +179,18 @@ def clean_text(text):
 
     return text
 
+def clean_text_authors(text):
+    text = fix_hyphenation(text)
+    text = fix_ligatures(text)
+    text = fix_combining_accents(text)
+    text = fix_backtick_artifacts(text)
+    text = fix_remaining_artifacts(text)
+    text = normalize_unicode(text)
+    text = remove_repeated_lines(text)
+    text = clean_structure(text)
+
+    return text
+
 # Monta o URL
 def build_doc_url(filename):
    doc_id = filename.split('-')[0]
@@ -556,3 +568,134 @@ def references_to_list(references_text):
         ref_list.append(current_ref)
 
     return ref_list
+
+# Extrai autores
+def extract_authors(path):
+    try:
+        doc = pymupdf.open(path)
+        
+        authors_data = []
+        
+        page = doc[0]
+        text = page.get_text()
+        text = clean_text_authors(text)
+            
+        authors_data = extract_authors_by_format(text)
+        
+        doc.close()
+        
+        return authors_data
+    
+    except Exception as e:
+        print(f"Erro ao extrair autores: {e}")
+        return []
+
+# Extrai autores baseado no formato.
+def extract_authors_by_format(text):    
+    lines = text.split('\n')
+    lines = [line.strip() for line in lines if line.strip()]
+
+    merged_lines = []
+    temp_line = ""
+
+    for line in lines:
+        if temp_line:
+            temp_line += " " + line
+        else:
+            temp_line = line
+
+        if not line.endswith(','):
+            merged_lines.append(temp_line)
+            temp_line = ""
+
+    if temp_line:
+        merged_lines.append(temp_line)
+    
+    author_line = ""
+    author_line_index = -1
+
+    for i, line in enumerate(merged_lines[:20]):
+        line_clean = re.sub(r'[\d,]+$', '', line)
+        names = re.findall(r'[A-ZÀ-Ú][a-zà-ú]+(?:\s+(?:da|de|do|das|dos)?\s*[A-ZÀ-Ú][a-zà-ú]+)+', line_clean, re.UNICODE)
+        name_count = len(names)
+
+        if name_count >= 2:
+            author_line = line
+            author_line_index = i
+            break
+
+    if not author_line:
+        return []
+    
+    authors = []
+    matches = re.findall(r'([A-ZÀ-Ú][a-zà-ú]+(?:\s+(?:da|de|do|das|dos)?\s*[A-ZÀ-Ú][a-zà-ú]+)+)(\d+(?:,\d+)*)?', author_line)
+    
+    for author_name, numbers in matches:
+        author_name = author_name.strip()
+
+        if not author_name:
+            continue
+
+        num_list = []
+
+        if numbers:
+            num_list = re.findall(r'\d+', numbers)
+
+        authors.append({
+            "nome": author_name,
+            "afiliacoes_nums": num_list,
+            "afiliacao": "",
+            "orcid": ""
+        })
+
+    if not authors:
+        return []
+
+    affiliations = {}
+    current_num = None
+    current_aff = []
+    
+    for i in range(author_line_index + 1, min(author_line_index + 30, len(merged_lines))):
+        line = merged_lines[i]
+
+        if re.search(r'@', line):
+            break
+
+        if re.search(r'^(abstract|resumo|1\.|introdução|keywords|palavras)', line.lower()):
+            break
+
+        num_match = re.match(r'^(\d+)\s*', line)
+
+        if num_match:
+            if current_num and current_aff:
+                affiliations[current_num] = ' '.join(current_aff)
+            
+            current_num = num_match.group(1)
+            current_aff = [re.sub(r'^\d+\s*', '', line)]
+        else:
+            if current_aff:
+                current_aff.append(line)
+            elif len(affiliations) == 0 and len(line) > 10:
+                current_num = str(len(affiliations) + 1)
+                current_aff = [line]
+
+    if current_num and current_aff:
+        affiliations[current_num] = ' '.join(current_aff)
+    
+    for author in authors:
+        if author.get('afiliacoes_nums'):
+            aff_list = []
+            for num in author['afiliacoes_nums']:
+                if num in affiliations and affiliations[num]:
+                    aff_list.append(affiliations[num])
+
+            if aff_list:
+                if len(aff_list) == 2:
+                    author['afiliacao'] = f"{aff_list[0]} e {aff_list[1]}"
+                else:
+                    author['afiliacao'] = '; '.join(aff_list)
+
+        if 'afiliacoes_nums' in author:
+            del author['afiliacoes_nums']
+
+    return authors
