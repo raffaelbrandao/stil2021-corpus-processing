@@ -205,13 +205,3 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-
-# Input data
-data/raw/*.pdf
-*.pdf
-
-# Processed data
-data/processed
-
-# Output data
-output/
