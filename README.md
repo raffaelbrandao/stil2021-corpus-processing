@@ -95,7 +95,7 @@ pip install PyMuPDF stanza pandas numpy tqdm
 ### 4. Verificar instalação
 
 ```bash
-python -c "import fitz, stanza, torch; print('✅ Todos os módulos carregados!')"
+python -c "import pymupdf, stanza, torch; print('✅ Todos os módulos carregados!')"
 ```
 
 ### 5. Configurar Jupyter Notebook
@@ -117,7 +117,7 @@ import sys
 print(f"Python: {sys.version}")
 
 # Célula 2: Imports principais
-import fitz
+import pymupdf
 import stanza
 import torch
 
@@ -133,11 +133,11 @@ print("✅ Módulos carregados com sucesso!")
 
 ## ⚠️ Problemas comuns e soluções
 
-### Erro: ModuleNotFoundError: No module named 'fitz'
+### Erro: ModuleNotFoundError: No module named 'pymupdf'
 
 ```bash
 %pip install PyMuPDF
-import fitz
+import pymupdf
 ```
 
 ### Erro: WinError 1114 (DLL falhou)
@@ -204,15 +204,15 @@ data/
 
 ## 🎯 Teste rápido
 ```bash
-import fitz
+import pymupdf
 import stanza
 import torch
 
 # Testar PyMuPDF
-doc = fitz.open()
+doc = pymupdf.open()
 page = doc.new_page()
 page.insert_text((50, 50), "Teste")
-print(f"✓ PyMuPDF: {fitz.__doc__.split(':')[0]}")
+print(f"✓ PyMuPDF: {pymupdf.__doc__.split(':')[0]}")
 
 # Testar PyTorch
 print(f"✓ PyTorch: {torch.__version__}")
@@ -226,7 +226,6 @@ doc.close()
 
 ## 📝 Observações finais
 - Python 3.11 é a versão recomendada para este projeto
-- O nome de importação do PyMuPDF é fitz (não PyMuPDF)
 - O warning sobre pymupdf.exe no PATH pode ser ignorado
 - Em caso de erros de DLL, verifique o Microsoft Visual C++ Redistributable
 - ⚠️ Importante: A primeira vez que você executar stanza.download('pt') ou carregar o modelo em português, o download pode demorar alguns minutos (cerca de 700MB a 1GB). As execuções subsequentes serão rápidas, pois o modelo fica em cache local
