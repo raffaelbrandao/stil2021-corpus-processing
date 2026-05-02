@@ -1,0 +1,181 @@
+configuracao,n_grama,rank,ngram_text,frequencia
+stopwords_no_lemmas,1,1,de,8602
+stopwords_no_lemmas,1,2,em,3313
+stopwords_no_lemmas,1,3,os,1692
+stopwords_no_lemmas,1,4,que,1416
+stopwords_no_lemmas,1,5,as,1301
+stopwords_no_lemmas,1,6,para,1158
+stopwords_no_lemmas,1,7,por,939
+stopwords_no_lemmas,1,8,um,860
+stopwords_no_lemmas,1,9,com,831
+stopwords_no_lemmas,1,10,uma,795
+stopwords_no_lemmas,1,11,como,665
+stopwords_no_lemmas,1,12,se,568
+stopwords_no_lemmas,1,13,and,543
+stopwords_no_lemmas,1,14,the,478
+stopwords_no_lemmas,1,15,of,462
+stopwords_no_lemmas,2,1,de os,545
+stopwords_no_lemmas,2,2,de as,379
+stopwords_no_lemmas,2,3,et al,370
+stopwords_no_lemmas,2,4,de um,164
+stopwords_no_lemmas,2,5,of the,157
+stopwords_no_lemmas,2,6,de dados,141
+stopwords_no_lemmas,2,7,em os,136
+stopwords_no_lemmas,2,8,de uma,133
+stopwords_no_lemmas,2,9,além de,106
+stopwords_no_lemmas,2,10,análise de,100
+stopwords_no_lemmas,2,11,de corpus,98
+stopwords_no_lemmas,2,12,em as,97
+stopwords_no_lemmas,2,13,em este,96
+stopwords_no_lemmas,2,14,proceedings of,95
+stopwords_no_lemmas,2,15,partir de,92
+stopwords_no_lemmas,3,1,et al 2020,89
+stopwords_no_lemmas,3,2,proceedings of the,88
+stopwords_no_lemmas,3,3,in proceedings of,63
+stopwords_no_lemmas,3,4,et al 2018,55
+stopwords_no_lemmas,3,5,com base em,53
+stopwords_no_lemmas,3,6,universidade federal de,48
+stopwords_no_lemmas,3,7,além de isso,48
+stopwords_no_lemmas,3,8,por meio de,46
+stopwords_no_lemmas,3,9,de os dados,46
+stopwords_no_lemmas,3,10,et al 2017,45
+stopwords_no_lemmas,3,11,de acordo com,39
+stopwords_no_lemmas,3,12,um de os,38
+stopwords_no_lemmas,3,13,international conference on,38
+stopwords_no_lemmas,3,14,em este trabalho,36
+stopwords_no_lemmas,3,15,uma vez que,34
+stopwords_lemmas,1,1,de,8603
+stopwords_lemmas,1,2,em,3313
+stopwords_lemmas,1,3,ser,2193
+stopwords_lemmas,1,4,um,1652
+stopwords_lemmas,1,5,que,1416
+stopwords_lemmas,1,6,para,1158
+stopwords_lemmas,1,7,por,939
+stopwords_lemmas,1,8,com,833
+stopwords_lemmas,1,9,como,665
+stopwords_lemmas,1,10,se,568
+stopwords_lemmas,1,11,and,543
+stopwords_lemmas,1,12,the,478
+stopwords_lemmas,1,13,esse,464
+stopwords_lemmas,1,14,of,462
+stopwords_lemmas,1,15,não,451
+stopwords_lemmas,2,1,et al,368
+stopwords_lemmas,2,2,de um,297
+stopwords_lemmas,2,3,de dado,189
+stopwords_lemmas,2,4,of the,157
+stopwords_lemmas,2,5,poder ser,153
+stopwords_lemmas,2,6,de esse,135
+stopwords_lemmas,2,7,em um,122
+stopwords_lemmas,2,8,em este,121
+stopwords_lemmas,2,9,ser um,117
+stopwords_lemmas,2,10,de texto,109
+stopwords_lemmas,2,11,além de,106
+stopwords_lemmas,2,12,que ser,104
+stopwords_lemmas,2,13,análise de,102
+stopwords_lemmas,2,14,de palavra,99
+stopwords_lemmas,2,15,de corpus,99
+stopwords_lemmas,3,1,et al 2020,89
+stopwords_lemmas,3,2,proceedings of the,88
+stopwords_lemmas,3,3,in proceedings of,63
+stopwords_lemmas,3,4,et al 2018,55
+stopwords_lemmas,3,5,com base em,53
+stopwords_lemmas,3,6,universidade federal de,48
+stopwords_lemmas,3,7,além de isso,48
+stopwords_lemmas,3,8,por meio de,46
+stopwords_lemmas,3,9,base de dado,46
+stopwords_lemmas,3,10,et al 2017,44
+stopwords_lemmas,3,11,cada um de,43
+stopwords_lemmas,3,12,de acordo com,39
+stopwords_lemmas,3,13,international conference on,38
+stopwords_lemmas,3,14,que poder ser,38
+stopwords_lemmas,3,15,em este trabalho,36
+no_stopwords_no_lemmas,1,1,corpus,334
+no_stopwords_no_lemmas,1,2,dados,276
+no_stopwords_no_lemmas,1,3,cada,198
+no_stopwords_no_lemmas,1,4,análise,198
+no_stopwords_no_lemmas,1,5,português,195
+no_stopwords_no_lemmas,1,6,2020,192
+no_stopwords_no_lemmas,1,7,palavras,183
+no_stopwords_no_lemmas,1,8,construção,182
+no_stopwords_no_lemmas,1,9,2018,165
+no_stopwords_no_lemmas,1,10,anotação,162
+no_stopwords_no_lemmas,1,11,modelo,156
+no_stopwords_no_lemmas,1,12,forma,148
+no_stopwords_no_lemmas,1,13,verbos,143
+no_stopwords_no_lemmas,1,14,resultados,143
+no_stopwords_no_lemmas,1,15,textos,142
+no_stopwords_no_lemmas,2,1,universal dependencies,53
+no_stopwords_no_lemmas,2,2,universidade federal,48
+no_stopwords_no_lemmas,2,3,português brasileiro,46
+no_stopwords_no_lemmas,2,4,international conference,40
+no_stopwords_no_lemmas,2,5,língua portuguesa,39
+no_stopwords_no_lemmas,2,6,natural language,39
+no_stopwords_no_lemmas,2,7,computational linguistics,36
+no_stopwords_no_lemmas,2,8,language processing,34
+no_stopwords_no_lemmas,2,9,question answering,32
+no_stopwords_no_lemmas,2,10,base dados,30
+no_stopwords_no_lemmas,2,11,linguagem natural,27
+no_stopwords_no_lemmas,2,12,fake news,26
+no_stopwords_no_lemmas,2,13,verbo falar,26
+no_stopwords_no_lemmas,2,14,português brasil,25
+no_stopwords_no_lemmas,2,15,leitura voz,25
+no_stopwords_no_lemmas,3,1,natural language processing,32
+no_stopwords_no_lemmas,3,2,leitura voz alta,25
+no_stopwords_no_lemmas,3,3,association computational linguistics,23
+no_stopwords_no_lemmas,3,4,processamento linguagem natural,20
+no_stopwords_no_lemmas,3,5,universidade federal sergipe,17
+no_stopwords_no_lemmas,3,6,conference empirical methods,14
+no_stopwords_no_lemmas,3,7,empirical methods natural,14
+no_stopwords_no_lemmas,3,8,methods natural language,14
+no_stopwords_no_lemmas,3,9,language resources evaluation,12
+no_stopwords_no_lemmas,3,10,letras universidade federal,12
+no_stopwords_no_lemmas,3,11,construções interrogativas qu,12
+no_stopwords_no_lemmas,3,12,corpus ud bosque,11
+no_stopwords_no_lemmas,3,13,bases dados verbais,11
+no_stopwords_no_lemmas,3,14,universal dependencies ud,10
+no_stopwords_no_lemmas,3,15,international conference language,10
+no_stopwords_lemmas,1,1,corpus,334
+no_stopwords_lemmas,1,2,poder,324
+no_stopwords_lemmas,1,3,construção,289
+no_stopwords_lemmas,1,4,dado,286
+no_stopwords_lemmas,1,5,ter,283
+no_stopwords_lemmas,1,6,apresentar,280
+no_stopwords_lemmas,1,7,palavra,262
+no_stopwords_lemmas,1,8,modelo,248
+no_stopwords_lemmas,1,9,utilizar,242
+no_stopwords_lemmas,1,10,texto,238
+no_stopwords_lemmas,1,11,forma,236
+no_stopwords_lemmas,1,12,português,227
+no_stopwords_lemmas,1,13,análise,218
+no_stopwords_lemmas,1,14,verbo,203
+no_stopwords_lemmas,1,15,outro,199
+no_stopwords_lemmas,2,1,universidade federal,48
+no_stopwords_lemmas,2,2,base dado,48
+no_stopwords_lemmas,2,3,português brasileiro,46
+no_stopwords_lemmas,2,4,international conference,40
+no_stopwords_lemmas,2,5,natural language,39
+no_stopwords_lemmas,2,6,universal dependencies,39
+no_stopwords_lemmas,2,7,computational linguistics,36
+no_stopwords_lemmas,2,8,language processing,34
+no_stopwords_lemmas,2,9,question answering,32
+no_stopwords_lemmas,2,10,língua português,31
+no_stopwords_lemmas,2,11,linguagem natural,27
+no_stopwords_lemmas,2,12,conjunto dado,27
+no_stopwords_lemmas,2,13,fake news,26
+no_stopwords_lemmas,2,14,verbo falar,26
+no_stopwords_lemmas,2,15,classe gramatical,25
+no_stopwords_lemmas,3,1,natural language processing,32
+no_stopwords_lemmas,3,2,leitura voz alto,25
+no_stopwords_lemmas,3,3,association computational linguistics,23
+no_stopwords_lemmas,3,4,processamento linguagem natural,20
+no_stopwords_lemmas,3,5,universidade federal sergipe,17
+no_stopwords_lemmas,3,6,conference empirical methods,14
+no_stopwords_lemmas,3,7,empirical methods natural,14
+no_stopwords_lemmas,3,8,methods natural language,14
+no_stopwords_lemmas,3,9,freitag resposta kom,13
+no_stopwords_lemmas,3,10,language resources evaluation,12
+no_stopwords_lemmas,3,11,letras universidade federal,12
+no_stopwords_lemmas,3,12,construção transitiva indireta,12
+no_stopwords_lemmas,3,13,corpus ud bosque,11
+no_stopwords_lemmas,3,14,universal dependencies ud,10
+no_stopwords_lemmas,3,15,international conference language,10
