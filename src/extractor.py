@@ -165,6 +165,63 @@ def extract_text(path):
         print(f"Erro ao ler o caminho do arquivo {path}: {e}")
         return ""
 
+def extract_article_body(text):
+    intro_patterns = [
+        r'(?i)(?:^|\n)\s*1\.?\s*INTRODUÇÃO\s*\n',
+        r'(?i)(?:^|\n)\s*1\.?\s*INTRODUCTION\s*\n',
+        r'(?i)(?:^|\n)\s*INTRODUÇÃO\s*\n',
+        r'(?i)(?:^|\n)\s*INTRODUCTION\s*\n',
+        r'(?i)(?:^|\n)\s*1\.\s*INTRO',
+    ]
+    
+    ref_patterns = [
+        r'(?i)(?:^|\n)\s*REFERÊNCIAS\s*\n',
+        r'(?i)(?:^|\n)\s*REFERENCES\s*\n',
+        r'(?i)(?:^|\n)\s*BIBLIOGRAFIA\s*\n',
+        r'(?i)(?:^|\n)\s*BIBLIOGRAPHY\s*\n',
+        r'(?i)(?:^|\n)\s*REF\s*\n',
+    ]
+    
+    start_pos = 0
+
+    for pattern in intro_patterns:
+        match = re.search(pattern, text)
+
+        if match:
+            start_pos = match.start()
+            break
+    
+    end_pos = len(text)
+
+    for pattern in ref_patterns:
+        match = re.search(pattern, text)
+
+        if match:
+            end_pos = match.start()
+            break
+    
+    body = text[start_pos:end_pos].strip()
+    body = remove_unwanted_sections(body)
+
+    return body
+
+def remove_unwanted_sections(text):
+    patterns_to_remove = [
+        r'(?i)^\s*ABSTRACT\s*\n.*?\n\n',
+        r'(?i)^\s*RESUMO\s*\n.*?\n\n',
+        r'(?i)^\s*KEYWORDS\s*:.*?\n',
+        r'(?i)^\s*PALAVRAS-CHAVE\s*:.*?\n',
+        r'(?i)^\s*ACKNOWLEDGEMENTS?\s*\n.*?\n\n',
+        r'(?i)^\s*AGRADECIMENTOS\s*\n.*?\n\n',
+        r'(?i)^\s*FUNDING\s*\n.*?\n\n',
+        r'(?i)^\s*CONFLICT OF INTEREST.*?\n',
+    ]
+
+    for pattern in patterns_to_remove:
+        text = re.sub(pattern, '', text, flags=re.DOTALL | re.MULTILINE)
+
+    return text.strip()
+
 def clean_text(text):
     text = fix_hyphenation(text)
     text = fix_ligatures(text)
