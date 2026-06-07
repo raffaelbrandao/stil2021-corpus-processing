@@ -1,0 +1,35 @@
+{
+  "perplexity_results": {
+    "stopwords_no_lemmas": {
+      "unigram": 697.1224548095039,
+      "bigram": 14.320531214413986,
+      "trigram": 1.5054322046631499
+    },
+    "stopwords_lemmas": {
+      "unigram": 537.5770745817958,
+      "bigram": 15.938784408510188,
+      "trigram": 1.5850803763545898
+    },
+    "no_stopwords_no_lemmas": {
+      "unigram": 1971.0955589410003,
+      "bigram": 8.802708494474048,
+      "trigram": 1.1809691725934819
+    },
+    "no_stopwords_lemmas": {
+      "unigram": 1344.8639867891359,
+      "bigram": 14.557385735206084,
+      "trigram": 1.219991704504316
+    }
+  },
+  "generated_paragraphs": {
+    "seed_A_semântica": {
+      "bigram": "a semântica lexical categorizar em active assinalamos que resultará em um traço gap np por acordo com desafios de factchecking proceedings of deep parsing from raw mas também controlada por os modelos gerados partir de seu estatuto de aprendizagem avaliado considerando os modelos induzidos foi proposto constituição de tabela apresenta os dados préprocessamento extração de predicados que de novembre en gráficos fundamentaram segmentação de ensino de aquilo uma rede twitter treebank for research on intelligent text wnut pages 5560 mitchell et al 2020 os provérbios que têm as mais complexas estão representadas por redes sociais como alquil glucosídeos odontesthes argentinensis",
+      "trigram": "a semântica aumentada ou diminuída em contextos de diante de os sentimentos de tópicos diversas abordagens que utilizam essas acepções básicas de gc sendo talvez modelo mais conhecido apresentado por neiva et al 2018 grosso modo expressão regular ou seja mesmo número tipo semântico de as regras flexionais primeira aplicação de diferentes abordagens têm sido desenvolvidas para tentar se aproximar aspecto cognitivo de frequência são necessariamente salientes de ponto de fixação podem ser monotongados ditongos decrescentes vogal seguida de glide velar visto como uma maneira de lidar com uma regular como em caso de as métricas usadas em esta pesquisa"
+    },
+    "seed_O_processamento": {
+      "bigram": "o processamento de tipo tabela em os resultados monitoramento de polaridade treinado disponível em português brasileiro com passar por vezes empregadas em posição já que snsujeito consiste em semiótica linguística para análise de pipeline ckbqa ainda encaram ensino médio de anotação ud uma melhora efetiva pois longo de fenômenos de dados mostrando que palavras específicas como ter mais como as emoções de extração excerto 03 10 as mesmas propriedades sintáticas semânticas que resultam em língua por nome em par com palatalização regressiva oclusiva conjunto de os valores distantes bem como substantivos diferentemente de esta análise de essa forma verbal 999",
+      "trigram": "o processamento portanto métodos que trabalham com geração de um etiquetador morfossintático para nheengatu working title projeto de os termos de processamento de linguagem natural pln aplicadas para saúde mental em brasil onde apenas um sentido contendo quatro argumentos que faz parte embora as questões linguísticas sejam específicas de cada modelo bow tfidf ou ngramas em que emergem de classificação multimodal de produtos antes de revisão de material didático com relação entidade ou assunto alvo de diversas classes estando relacionadas com apenas 11581 entradas uma análise de as bases verbais construídas para fins acadêmicos relevância para aplicações de as linhas"
+    }
+  },
+  "best_model": "no_stopwords_no_lemmas"
+}
