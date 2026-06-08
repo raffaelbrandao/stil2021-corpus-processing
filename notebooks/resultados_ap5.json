@@ -1,0 +1,31 @@
+{
+  "modelo": "BERTimbau (neuralmind/bert-base-portuguese-cased)",
+  "diretorio_modelo": "../data/bertimbau_model",
+  "questao_1": {
+    "palavras": {
+      "a": "modelos",
+      "b": "linguagem",
+      "c": "and",
+      "d": "ser"
+    },
+    "dimensao_embedding": 768
+  },
+  "questao_2": {
+    "substantivo_frequente": [
+      "and",
+      437
+    ],
+    "verbo_frequente": [
+      "ser",
+      2096
+    ]
+  },
+  "questao_3": {
+    "estilos": {
+      "Descritivo": "18",
+      "Narrativo": "6",
+      "Acadêmico": "6"
+    },
+    "artigos_classificados": 30
+  }
+}
