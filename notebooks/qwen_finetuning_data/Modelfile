@@ -1,0 +1,19 @@
+FROM qwen2.5:1.5b
+
+# Parâmetros para classificação precisa
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER num_predict 5
+PARAMETER repeat_penalty 1.1
+PARAMETER stop "\n"
+PARAMETER stop "."
+
+# Prompt do sistema
+SYSTEM """Você é um classificador de estilos de escrita acadêmica.
+Classifique o texto em um dos três estilos:
+
+1. ACADEMICO: Uso de voz passiva (ex: "observou-se que..."), terceira pessoa, evita adjetivos e jargões.
+2. NARRATIVO: Uso de primeira pessoa do plural (ex: "analisamos os dados..."), escrita fluida e reflexiva.
+3. DESCRITIVO: Rigor matemático/estatístico, frases curtas, ordenação cronológica/lógica.
+
+Responda APENAS com uma palavra: academico, narrativo ou descritivo."""
